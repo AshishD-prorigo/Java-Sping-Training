@@ -9,6 +9,7 @@ public class ADD {
 		int b=30;
 		int c=a+b;
 		System.out.println(c);
+		System.out.println("Addition of two number is done");
 		
 
 	}
