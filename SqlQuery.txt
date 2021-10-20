@@ -1,0 +1,104 @@
+select *from department;
+# length of string
+select length('Ashish d');
+
+select dep_name, length(dep_name) as 'Length of dep_name' from
+department;
+
+select instr('Ashish','a') from dual;
+
+
+ #select addition(15,60) execute;
+ 
+ select*from mobile;
+select concat(lower(substring(mname,1,1)), substring(upper(mname),2,length(mname))) from mobile;
+ 
+ 
+select substring('Ashish',3,6);
+select *from employee;
+#####problem in group concat
+select reverse(mname) from mobile;
+select datediff(curdate(), '2019/06/12')/365 as 'Experience';
+select curdate();
+
+set @a=now();
+select @a;
+
+select dep_id,lpad(emp_salary,10,'*') from employee;
+
+select AdditionOf2(20,30);
+call Addition2(50,30);#procedure
+select CubeOf(10);
+select PositiveNegative(0);
+set @result=0;
+call CubeP(5);
+select @result;
+
+call PositiveNegative2(-60);
+
+
+select *from employee;
+
+alter table employee // drop table
+drop column empJdate; // drop column
+insert into employee value(32,'Sales',20000,5555),
+				(33,'Maintance',10000,7777),
+                            (96,'Hr',50000,4444),
+                            (75,'Marketing',40000,2222),
+                            (104,'ToolRoom',17000,8855);// Insert Data Into Table
+             
+alter table employee
+add column emp_LastName varchar(20);     
+
+select *from employee;
+
+ 
+
+update  employee set emp_FirstName='Ajay' , emp_LastName='Uprikar' where emp_id=12;
+
+update employee set  emp_FirstName='Krishna', emp_LastName='Nimje' where emp_id=104;
+
+select *from employee order by emp_id;  
+
+select *from employee order by emp_LastName;
+
+update  employee set empSal=empSal+18000 where emp_id=104;
+
+
+select emp_FirstName,depid from employee order by depid;
+
+#Assignment 1
+#1. Write a query to display the names (first_name, last_name) and salary for all employees whose salary is 
+#not in the range $10,000 through $15,000.
+
+select emp_FirstName,emp_LastName, empSal from  employee where empSal not between  10000 and 15000;
+
+#Above quarry for Assignment answer 1;
+
+#2. Write a query to display the names (first_name, last_name) and department ID of all employees
+# in departments 30 or 100 in ascending alphabetical order by department ID.
+
+select distinct(empSal) from employee;
+
+
+select avg(empSal)  as'Employee Salary' from employee;
+
+select min(empSal) as'min Salary' from employee;
+
+select max(empSal) as 'Max Salary' from employee;
+
+select sum(empSal) as'Total Sum Salary' from employee;
+select count(emp_id) from employee;
+
+select count(emp_FirstName) from employee;
+
+
+select empSal from employee group by emp_id having empSal;
+select *from employee where emp_FirstName like'%A';
+select *from employee;
+
+update  employee set deprtName='Sales'  where emp_id=104;
+
+select *, sum(empSal)  from employee group by deprtName;
+
+select count(emp_FirstName) from employee;
