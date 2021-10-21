@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd"
+ >
+ 
+ 
+ <!-- p/schema for direct add value -->
+ 
+ <bean class="com.springTest.Mobile" name="mobile1" 
+ 		p:m_id="121" p:m_name="Oppo" p:m_color="blue" p:m_price="18000"	/>
+		
+ 
+ <bean class="com.springTest.Mobile" name="mobile2"
+ 		p:m_id="212" p:m_name="OnePlus" p:m_color="Grey" p:m_price="35000"/>
+ 		
+ 
+ 
+ </beans>
