@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd"
+ >
+ <bean class="com.Collection.Employee" name="emp1">
+ 
+ <property name="name" value="Ashish Damahe" />
+ 
+ 
+ <property name="mo_no">
+ <list>
+ <value>9860332***</value>
+ <value>960032****</value>
+ <value>8563241***</value>
+ 
+ </list>
+ </property>
+ 
+ <property name="address">
+ <set>
+ <value>Bhandara</value>
+ <value>Nagpur</value>
+ <value>Pune</value>
+ <value>Mumbai</value>
+ <value>Mumbai</value>
+ </set>
+ </property>
+ 
+ <property name="courses">
+ <map>
+ <entry key="Java" value="3 Month" />
+ <entry key="MySql" value="1 Month" />
+ <entry key="HTML" value="1 Month" />
+ <entry key="Spring" value="3 Days" />
+ </map>
+ 
+ </property>
+ </bean>
+ </beans>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd"
+ >
+ 
+ <bean class="com.diffConstructor.Engine" name="engine">
+ <constructor-arg value="123" />
+ <constructor-arg value="4 Stroke" />
+ </bean>
+ 
+ <bean class="com.diffConstructor.Bike" name="bike">
+ <constructor-arg value="321" />
+ <constructor-arg value="Splender Plus" />
+ <constructor-arg>
+ <list>
+ <value>Black</value>
+ <value>Red</value>
+ <value>White</value>
+ <value>Green</value>
+ <value>Orange</value>
+ 
+ </list>
+ 
+ </constructor-arg>
+ <constructor-arg><ref bean="engine" /></constructor-arg>
+ 
+ </bean>
+ 
+  <bean class="com.diffConstructor.Engine" name="engine1">
+ <constructor-arg value="789" />
+ <constructor-arg value="5 Stroke" />
+ </bean>
+ 
+ <bean class="com.diffConstructor.Bike" name="bike2">
+ <constructor-arg value="654" />
+ <constructor-arg value="Hornet" />
+ <constructor-arg>
+ <list>
+ <value>White</value>
+ <value>Green</value>
+ <value>Orange</value>
+ 
+ </list>
+ 
+ </constructor-arg>
+ <constructor-arg><ref bean="engine1" /></constructor-arg>
+ 
+ </bean>
+ 		
+ 
+ 
+ </beans>

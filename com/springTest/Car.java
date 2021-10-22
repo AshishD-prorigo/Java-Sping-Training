@@ -8,14 +8,14 @@ public class Car {
 		return carId;
 	}
 	public void setCarId(int carId) {
-		System.out.println("Setting Car Id");
+//		System.out.println("Setting Car Id"); To check Setter Method Calling or not
 		this.carId = carId;
 	}
 	public String getCarName() {
 		return carName;
 	}
 	public void setCarName(String carName) {
-		System.out.println("Setting car Name");
+//		System.out.println("Setting car Name");
 		this.carName = carName;
 	}
 	public String getCarColor() {
